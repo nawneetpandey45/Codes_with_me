@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: space-around; /* Ensures equal spacing between logos */
+            align-items: center;
+            width: 100%; /* Set the width to 100% */
+            background-color: #fff;
+            z-index: 1000;
+            position: sticky;
+            top: 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            gap: 50px; /* Adds a gap of 50px between logos */
+        }
+
+        .logos img {
+            max-width: 100%;
+            height: 55px;
+            width: 100px; /* Adjust the size of the logos if needed */
+        }
+
+        .navbar {
+            background-color: #a5e887;
+            padding: 10px;
+            position: sticky;
+            top: 70px; /* Adjust based on logo height */
+            z-index: 999;
+            border-bottom: 1px solid #ddd;
+            font-size: 15px;
+            font-weight: normal;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar ul li {
+            margin: 0 10px;
+        }
+
+        .navbar ul li a, .dropdown button {
+            text-decoration: none;
+            color: #000;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px 15px;
+            margin: 5px;
+            display: inline-block;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border-radius: 5px;
+            background-color: #a5e887; /* Optional: A subtle background color */
+        }
+
+        /* 3D hover effect */
+        .navbar ul li a:hover, .dropdown button:hover {
+            transform: translateY(-5px) scale(1.05); /* Lift and scale effect */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for 3D feel */
+        }
+
+        /* Active state (when clicked) */
+        .navbar ul li a:active, .dropdown button:active {
+            transform: translateY(0) scale(1); /* Return to the original position */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Reduced shadow */
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 5px 10px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="logos">
+            <img src="https://innovation.opju.ac.in/_nuxt/img/oic_logo_full.c91a3b0.png" alt="Logo 1" class="logo">
+            <img src="https://www.opju.ac.in/images/opju_logo.png" alt="Logo 2" class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOJ1e4I0Tnuwq55hzwfxpD7ZVVrUfKeStT_A&s" alt="Logo 3" class="logo">
+        </div>
+
+        <div class="navbar">
+            <ul>
+                <li><a href="#home.html" title="Go to Home page" style="font-size: 14px;">Home</a></li>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdownMenuAbout')">About ▼</button>
+                    <div class="dropdown-content" id="dropdownMenuAbout">
+                        <a href="aboutUS.html" target="_blank">About Us</a>
+                        <a href="#incubation.html" target="_blank">Incubation Process</a>
+                        <a href="#incubation-guideline.html" target="_blank">Incubation Guideline</a>
+                    </div>
+                </div>
+                <li><a href="#" title="Explore Fab Labs">Fab Labs</a></li>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdownMenuEvents')">Events ▼</button>
+                    <div class="dropdown-content" id="dropdownMenuEvents">
+                        <a href="#highlights.html">Highlights</a>
+                        <a href="#skill-development">Skill Development Program</a>
+                    </div>
+                </div>
+                <li><a href="#" title="Meet our Team">Team</a></li>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdownMenuAchievements')">Achievements ▼</button>
+                    <div class="dropdown-content" id="dropdownMenuAchievements">
+                        <a href="#achievement.html">Achievement</a>
+                        <a href="#achievement-list.html">Achievement List</a>
+                    </div>
+                </div>
+                <li><a href="#" title="Apply Now to join us">Apply Now</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <script>
+        function toggleDropdown(menuId) {
+            const dropdowns = document.querySelectorAll('.dropdown-content');
+            dropdowns.forEach(menu => {
+                if (menu.id !== menuId) {
+                    menu.style.display = 'none';
+                }
+            });
+
+            const dropdownMenu = document.getElementById(menuId);
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            } else {
+                dropdownMenu.style.display = 'block';
+            }
+        }
+
+        document.addEventListener('click', (event) => {
+            const isDropdown = event.target.closest('.dropdown');
+            if (!isDropdown) {
+                const dropdowns = document.querySelectorAll('.dropdown-content');
+                dropdowns.forEach(menu => menu.style.display = 'none');
+            }
+        });
+    </script>
+</body>
+</html>

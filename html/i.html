@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website with Slideshow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            margin: 10px ;
+            width: 100%;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(246, 243, 243, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        /* .logos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 70%; /* Adjust this value for more or less space for logos */
+        }
+        /* /* .logos img {
+            max-width: 100%;
+            height: auto;
+            width: 100px; Adjust width as needed  }*/ 
+            .logos {
+    display: flex;
+    justify-content: center; /* Centers logos horizontally */
+    align-items: center; /* Aligns logos vertically */
+    gap: 20px; /* Space between logos */
+    padding: 20px; /* Padding around the entire container */
+    background-color: #f9f9f9; /* Optional: Light background */
+    border-radius: 10px; /* Optional: Rounded corners for the container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+}
+
+.logos img {
+    width: 100px; /* Equal width for all logos */
+    height: 100px; /* Equal height for all logos */
+    object-fit: contain; /* Ensures logos fit within the set dimensions without distortion */
+    padding: 10px; /* Inner space around each logo */
+    background-color: #ffffff; /* Optional: White background for logos */
+    border: 1px solid #ddd; /* Optional: Light border around each logo */
+    border-radius: 5px; /* Optional: Slightly round the logo edges */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds depth to logos */
+    margin: 10px; /* Outer space around each logo */
+    transition: transform 0.3s ease; /* Smooth hover animation */
+}
+
+.logos img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+        ul {
+            list-style-type: none;
+            padding: 10px;
+            margin: 5px;
+        }
+        ul > li {
+            position: relative;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        ul > li > a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        ul > li > a:hover {
+            background-color: #323332;
+        }
+        .navbar{
+            width: 100%;
+        }
+        /* ड्रॉपडाउन स्टाइल */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
+        .navbar a:hover {
+            background-color: #8d8a8a ;
+        }
+        .slideshow {
+            position: relative;
+            max-width: 100%;
+            height: 300px;
+            overflow: hidden;
+            margin: px 0;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+        /* Navigation arrows */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            user-select: none;
+            transform: translateY(-50%);
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logos">
+                <img src="oic_logo_full.c91a3b0.png" alt="Logo 1">
+                <img src="opjulogo.png" alt="Logo 2">
+                <img src="naac.jpeg" alt="Logo 3">
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="#" title="Go to Home page">Home</a></li>
+                    <li>
+                        <a href="#" title="Learn more About us" onclick="toggleDropdown()">About ▼</a>
+                        <ul class="dropdown" id="aboutDropdown">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Incubation Process</a></li>
+                            <li><a href="#">Incubation Guideline</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title="Explore Fab Labs">Fab Labs</a></li>
+                    <li><a href="#" title="View upcoming Events">Events</a></li>
+                    <li><a href="#" title="Meet our Team">Team</a></li>
+                    <li><a href="#" title="See our Achievements">Achievements</a></li>
+                    <li><a href="#" title="Apply Now to join us">Apply Now</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slideshow">
+            <div class="slides" id="slides"></div>
+            <span class="prev" onclick="showPrevSlide()">&#10094;</span>
+            <span class="next" onclick="showNextSlide()">&#10095;</span>
+        </div>
+    </div>
+
+    <script>
+        const slideImages = [
+            "naac.jpeg", "opjulogo.png", "slide3.jpg", "slide4.jpg", "slide5.jpg",
+            "slide6.jpg", "slide7.jpg", "slide8.jpg", "slide9.jpg", "slide10.jpg"
+        ];
+        const slidesContainer = document.getElementById('slides');
+
+        slideImages.forEach(image => {
+            const slide = document.createElement('div');
+            slide.classList.add('slide');
+            slide.innerHTML = `<img src="${image}" alt="Slide">`;
+            slidesContainer.appendChild(slide);
+        });
+
+        let slideIndex = 0;
+        const totalSlides = slideImages.length;
+
+        function showNextSlide() {
+            slideIndex = (slideIndex + 1) % totalSlides;
+            slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        function showPrevSlide() {
+            slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+            slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+
+        // Pause slideshow on hover
+        const slideshow = document.querySelector('.slideshow');
+        slideshow.addEventListener('mouseover', () => clearInterval(slideInterval));
+        slideshow.addEventListener('mouseout', () => {
+            slideInterval = setInterval(showNextSlide, 3000);
+        });
+
+        let slideInterval = setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+
+        function toggleDropdown() {
+        const dropdown = document.getElementById('aboutDropdown');
+        if (dropdown.style.display === 'block') {
+            dropdown.style.display = 'none';
+        } else {
+            dropdown.style.display = 'block';
+        }
+    }
+
+    // ड्रॉपडाउन के बाहर क्लिक करने पर इसे बंद करना
+    document.addEventListener('click', function(event) {
+        const dropdown = document.getElementById('aboutDropdown');
+        const aboutLink = event.target.closest('a[title="Learn more About us"]');
+        if (!aboutLink && dropdown.style.display === 'block') {
+            dropdown.style.display = 'none';
+        }
+    });
+    </script>
+</body>
+</html>

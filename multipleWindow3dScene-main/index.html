@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nawneet Pandey | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5rem 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+    header img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      margin-bottom: 1rem;
+    }
+    header h1 span {
+      color: #00c3ff;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(6px);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00c3ff;
+    }
+    section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    h2 {
+      margin-bottom: 1rem;
+      border-left: 4px solid #00c3ff;
+      padding-left: 0.5rem;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 1rem;
+      border-radius: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 2rem;
+      background: #00c3ff;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #00a3dd;
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+    ul {
+      margin-left: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header data-aos="fade-down">
+    <img src="photo.jpg" alt="Profile Photo"/>
+    <h1><span id="typed"></span></h1>
+    <p>Web Developer | B.Tech CSE – OPJU</p>
+  </header>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>Disciplined and enthusiastic learner passionate about technology. Always ready to adapt and grow in a dynamic environment. Seeking to contribute my full-stack development skills to impactful projects.</p>
+  </section>
+
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x150" alt="Technorollix Website">
+        <h3>Technorollix College Fest Website</h3>
+        <p>Designed and developed a fully functional, responsive website for OPJU's college fest using HTML, CSS, JavaScript, and backend tools.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x150" alt="Voice Typing">
+        <h3>Voice Typing Website</h3>
+        <p>Converts spoken input to text using speech recognition.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x150" alt="E-Commerce">
+        <h3>E-Commerce Website</h3>
+        <p>Online platform enabling digital transactions for products/services.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x150" alt="Innovation Center">
+        <h3>Innovation Center Website</h3>
+        <p>Currently developing a user-friendly and impactful website at OP Jindal Innovation Center.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" data-aos="fade-up">
+    <h2>Resume</h2>
+    <ul>
+      <li><strong>Name:</strong> Nawneet Pandey</li>
+      <li><strong>Location:</strong> Raigarh, Chhattisgarh</li>
+      <li><strong>Email:</strong> nawn.bt23cs61@opju.ac.in</li>
+      <li><strong>Phone:</strong> 9155932232</li>
+      <li><strong>Education:</strong> B.Tech CSE (2023–2027), OP Jindal University</li>
+      <li><strong>Technical Skills:</strong> HTML, CSS, JavaScript, React.js, Node.js, Express.js, MySQL, Git, Postman, VS Code</li>
+      <li><strong>Languages:</strong> C, Python, Java</li>
+      <li><strong>Achievements:</strong> Smart India Hackathon 2024 Participant, Volunteer in university events</li>
+    </ul>
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Email: nawn.bt23cs61@opju.ac.in</p>
+    <p>Phone: 9155932232</p>
+    <p>Location: Raigarh, Chhattisgarh</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Nawneet Pandey | All rights reserved</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+    new Typed("#typed", {
+      strings: ["Nawneet Pandey", "Full Stack Developer", "Tech Enthusiast"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true
+    });
+  </script>
+</body>
+</html>

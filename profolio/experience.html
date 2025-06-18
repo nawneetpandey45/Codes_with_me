@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Section</title>
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+            
+        }
+
+        /* Navigation bar */
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            background: black;
+            padding: 10px 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: yellow;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .nav a:hover {
+            color: #F39C12;
+            transform: scale(1.1);
+        }
+
+        /* Image Container */
+        .img {
+            position: relative;
+            height: 100vh; /* Full viewport height */
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Background Image Styles */
+        .img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        /* Content Styling */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Ensures both sections align at the top */
+            color: white;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(39, 33, 33, 0.6));
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .content-section {
+            width: 48%;
+            top: 80%;
+            text-align: center;
+        }
+
+        /* Title Styling */
+        .content h2, .content h3, .content p, ul li {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #F1C40F; /* Vibrant Yellow for title */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: transform 0.3s ease, color 0.3s ease;
+            text-align: center;
+        }
+
+        /* Hover effect for <h2>, <h3>, <p>, and <ul> */
+        .content h2:hover,
+        .content h3:hover,
+        .content p:hover,
+        ul li:hover {
+            color: #F39C12; /* Change color on hover */
+            transform: scale(1.05); /* Slightly increase size */
+            cursor: pointer; /* Change cursor to pointer to show interactivity */
+        }
+
+        /* Paragraph Styling */
+        .content p {
+            font-size: 1.1rem;
+            color: #B0BEC5; /* Subtle gray */
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        /* List Styling */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            font-size: 1rem;
+            color: white;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        /* Custom Bullet Point */
+        ul li::before {
+            content: "\2022";
+            color: #16A085; /* Matching teal bullet */
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                padding: 20px;
+                width: 90%;
+            }
+
+            .content-section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .content h2 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .content h3 {
+                font-size: 1.3rem;
+            }
+
+            ul li {
+                font-size: 0.9rem;
+            }
+
+            .nav {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPYSNW6G5LscwBXFwThmohwtI48zviZni1vw&s" alt="Background Image">
+        <!-- <h2>Experience</h2> -->
+
+        <section id="experience" class="content">
+            <!-- Left Section -->
+             <!-- <h2>Experience</h2> -->
+            <div class="content-section">
+                <!-- <h2>Experience</h2> -->
+                <h3>Teaching Associate</h3>
+                <p><strong>Institution:</strong> O.P. Jindal University (Since August 5, 2024)</p>
+                <ul>
+                    <li>Teaching courses such as Computer Fundamentals, Python for Data Science, and Introduction to Data Science.</li>
+                    <li>Guiding students through foundational and advanced concepts in data analysis and programming.</li>
+                    <li>Facilitating labs and interactive sessions to enhance learning outcomes.</li>
+                    <li>Providing academic mentorship and support to students.</li>
+                </ul>
+            </div>
+
+            <!-- Right Section -->
+            <div class="content-section">
+                <h3>Python Data Analyst Intern</h3>
+                <p><strong>Company:</strong> N Squared Solutions (Oct 2023 - Apr 2024)</p>
+                <ul>
+                    <li>Cleaned, processed, and analyzed datasets to ensure accuracy and reliability.</li>
+                    <li>Utilized Python libraries to visualize trends and provide actionable insights.</li>
+                    <li>Designed automated workflows to reduce manual effort by 30%.</li>
+                    <li>Created dashboards and reports for effective stakeholder communication.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

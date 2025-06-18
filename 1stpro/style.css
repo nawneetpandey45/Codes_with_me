@@ -1,0 +1,123 @@
+body{
+    /* background-image: url("https://content.jdmagicbox.com/comp/raigarh-chhattisgarh/v2/9999p7762.7762.131108120634.a1v2/catalogue/o-p-jindal-university-punjipathra-raigarh-chhattisgarh-colleges-23ov5w8z4l.jpg"); */
+}
+.container {
+    background-color: rgb(255, 255, 255);
+    /* padding: 20px;
+    margin: 10px ; */
+    width: 100%;
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(246, 243, 243, 0.1);
+    height: 100%;
+}
+.left {
+    /* position: fixed; */
+    width: 100%;
+    background-color: #454545;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100% 100% 100%;
+}
+
+.header1 {
+    /* position: fixed; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    place-items: center;
+}
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%; /* Adjust this value for more or less space for logos */
+    margin-left:50px;
+}
+.logos img {
+    max-width: 100%;
+    height: auto;
+    width: 100px; /* Adjust width as needed */
+    margin-left:100px;
+
+}
+
+.header2{
+    display: flex;
+    position: relative;
+    justify-content:center;
+    align-items: center; 
+    background-color: #a5e887;
+    height: 50px;
+    width: 100%;
+    margin: 30px;
+    place-items: center;
+}
+.navbar{
+    te
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #2f4f4f;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Nav Links Styling */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Dropdown Menu Content (Initially Hidden) */
+.dropdown-content {
+    display: none;
+    background-color: #333;
+    position: absolute;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Dropdown Links Styling */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Hover Effect for Dropdown Links */
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+/* Positioning the Dropdown */
+.dropdown {
+    position: relative;
+}
+
+/* Show Dropdown on Click */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.photo{
+        background-color: aqua;
+        
+}
+.p{
+    background-color: aqua;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Section</title>
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation bar */
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            background: black;
+            padding: 10px 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: yellow;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .nav a:hover {
+            color: #F39C12;
+            transform: scale(1.1);
+        }
+
+        /* Container for the image and content */
+        .img {
+            position: relative;
+            height: 100vh; /* Full viewport height */
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Background image styles */
+        .img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        /* Skills content overlay */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(39, 33, 33, 0.6));
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Cards inside the content */
+        .skills {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: RGB(60, 80, 83);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            color: white;
+            text-align: center;
+            flex: 1 1 30%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            min-width: 250px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <a href="index.html" >Home</a>
+        <a href="about.html" >About</a>
+        <a href="skills.html" >Skills</a>
+        <a href="experience.html" >Experience</a>
+        <a href="projects.html" >Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html" >Contact</a>
+    </div>
+
+    <div class="img">
+        <img src="https://www.shutterstock.com/image-photo/soft-skills-personal-fitness-responsibility-260nw-1348992461.jpg" alt="Background Image">
+        <section id="skills" class="content">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="card">
+                    <h3>Technical Skills</h3>
+                    <p>Data Analytics, Machine Learning, Data Visualization, Statistical Analysis, Predictive Analysis, Database Management, Data Mining.</p>
+                </div>
+                <div class="card">
+                    <h3>Programming</h3>
+                    <p>Python, R Programming, SQL, Java (Basic), Matplotlib, Python Libraries.</p>
+                </div>
+                <div class="card">
+                    <h3>Soft Skills</h3>
+                    <p>Analytical Thinking, Problem Solving, Communication, Teamwork, Management Style.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

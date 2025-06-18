@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    background-size: 100% 100%;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 10px ;
+    width: 100%;
+    
+    /* border-radius: 10px; */
+    box-shadow: 0 4px 8px rgba(246, 243, 243, 0.1);
+    height: 100%;
+}
+.logo{
+    display: flex; /* Logos ko ek row mein arrange karne ke liye */
+  justify-content: space-between; /* Equal space between logos */
+  align-items: center; /* Logos vertically center align karne ke liye */
+  padding: 10px; 
+  /* background-color: black; */
+  width: 100% 100% 100%;
+  background-size: 100%;
+}
+
+

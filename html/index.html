@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Portal</title>
+    <link rel="icon" href="https://cdn3.vectorstock.com/i/1000x1000/70/87/new-user-registration-color-icon-vector-44517087.jpg">
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            font-family: Arial, Helvetica, sans-serif ;
+            background: color #CEEFF2;
+            background-image: linear-gradient(to top left,red, yellow);
+        }
+        header,footer{
+            background-color:#395c60;
+            color: aliceblue;
+            text-align: center;
+            padding: 2px; 
+        }
+        .navitem{
+            display: inline;
+            padding: 15px; ;
+        }
+        .navitem a{
+            text-decoration: none;
+        }
+        .rgfrom{
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .emptable{
+        text-align: center;
+    }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th,td{
+            border: 1px solid #395c60;
+            padding: 8px;
+        }
+        .contactus{
+            text-align: center;
+        }
+    </style>
+    
+
+    }
+</head>
+<body>
+    <header>
+        <h2>welcome to compnay hr protal</h2>
+        <nav>
+            <ul>
+                <li class="navitem"><a href="#employee-registration">Employee Registration</a></li>
+                <li class="navitem"><a href="#employee-directory">Employee directory </a></li>
+                <li class="navitem"><a href="#Contact-us">Contact Us </a></li>
+             </ul>
+        </nav>
+    </header>
+    <img src="https://www.theladders.com/wp-content/uploads/interview-190709.jpg" style="width:100%;" height="400px">
+    <section id="employee-registration" class="rgfrom">
+        <h2> Employee Registration</h2>
+        <p> Fill the below from to Registar as Employee.</p>
+        <form>
+            <label  for="name"> Name  : </label>
+            <input type="text" id="name"><br><br>
+            <label for="email">Email  :</label>
+            <input type="email" id="email"><br><br>
+            <label for="password">password  : </label>
+            <input type="password" id="password"><br><br>
+            <label for="age">Age  : </label>
+            <input type="number" id="age"><br><br>
+            <label for="role">Select Role</label>
+            <select id="role">
+                <option>Software Engineer</option>
+                <option>AI Devloper</option>
+                <option>App Devloper</option>
+                <option>Web Devloper</option>
+                <option>ML devloper</option>
+            </select><br><br>
+            <label for="joiningdate">joining Date</label>
+            <input type="date" id="joiningdate"><br><br>
+            <input type="submit">
+        </form>
+    </section><br><br>
+
+
+    <section id="employee-directory" class="emptable">
+        <h2>Employee directory</h2>
+        <p>list of all Register employee</p>
+        <table>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Employee Role</th>
+            </tr>
+            <tr>
+                <td>01UG23020061</td>
+                <td>Nawneet pandey</td>
+                <td>AI Devloper</td>
+            </tr>
+            <tr>
+                <td>01UG23020062</td>
+                <td> Depak</td>
+                <td>Web Devloper</td>
+            </tr>
+            <tr>
+                <td>01UG23020065</td>
+                <td>sourabh meehani</td>
+                <td>App Devloper</td>
+            </tr>
+        </table>
+
+    </section>
+    <section  id="Contact-us" class="contactus">
+        <h2>Contact Us</h2>
+        <p>you  can contact us at company@official.comm or 9155932232</p>
+        <p>You can also visit company 9am to 5 pm</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.938063261605!2d83.39128709999999!3d21.8984607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a27253b6b8ab741%3A0xdbf943b8ba4bfe42!2sGOOGLE%20CLASSES!5e0!3m2!1sen!2sin!4v1735354230837!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <footer>
+        <p>It companay</p>
+    </footer>
+
+
+</body>
+</html>

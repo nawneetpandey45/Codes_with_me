@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+                <div class="left">
+                    <span>15/01/2025 22:44:34 PM IST</span>
+                </div>
+            <div class="header1">
+                <div class="logos">
+                    <img src="https://innovation.opju.ac.in/_nuxt/img/oic_logo_full.c91a3b0.png" alt="Logo 1" class="logo">
+                    <img src="https://www.opju.ac.in/images/opju_logo.png" alt="Logo 2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOJ1e4I0Tnuwq55hzwfxpD7ZVVrUfKeStT_A&s" alt="Logo 3">
+                </div>
+            </div>
+            <div class="navbar">
+                <a href="#">Home</a>
+        
+                <!-- About Dropdown -->
+                <div class="dropdown">
+                    <a onclick="toggleDropdown('aboutDropdown')">About ▼</a>
+                    <div class="dropdown-content" id="aboutDropdown">
+                        <a href="#">About Us</a>
+                        <a href="#">Incubation Process</a>
+                        <a href="#">Incubation Guidelines</a>
+                    </div>
+                </div>
+        
+                <!-- Fab Labs Link -->
+                <a href="#">Fab Labs</a>
+        
+                <!-- Events Dropdown -->
+                <div class="dropdown">
+                    <a onclick="toggleDropdown('eventsDropdown')">Events ▼</a>
+                    <div class="dropdown-content" id="eventsDropdown">
+                        <a href="#">Highlights</a>
+                        <a href="#">Skill Development</a>
+                    </div>
+                </div>
+        
+                <a href="#">Team</a>
+        
+                <!-- Achievements Dropdown -->
+                <div class="dropdown">
+                    <a onclick="toggleDropdown('achievementsDropdown')">Achievements ▼</a>
+                    <div class="dropdown-content" id="achievementsDropdown">
+                        <a href="#">Achievements</a>
+                        <a href="#">Achievements List</a>
+                    </div>
+                </div>
+        
+                <a href="#">Apply Now</a>
+            </div>
+
+            <!-- <div class="slideshow">
+                <div class="slides" id="slides"></div>
+                <span class="prev" onclick="showPrevSlide()">&#10094;</span>
+                <span class="next" onclick="showNextSlide()">&#10095;</span>
+            </div> -->
+            <div class="photo">
+                <div class="p">
+
+                </div>
+            </div>
+            <script>
+                // Function to toggle dropdown visibility
+                function toggleDropdown(id) {
+                    var dropdown = document.getElementById(id);
+                    if (dropdown.style.display === "block") {
+                        dropdown.style.display = "none";
+                    } else {
+                        dropdown.style.display = "block";
+                    }
+                }
+        
+                // Close dropdowns when clicking outside
+                window.onclick = function(event) {
+                    if (!event.target.matches('.dropdown a')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        for (var i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.style.display === "block") {
+                                openDropdown.style.display = "none";
+                            }
+                        }
+                    }
+                }
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        /* Reset styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Navigation bar */
+        .add {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            background: black;
+            padding: 10px 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            word-spacing: 150px;
+        }
+
+        .add a {
+            text-decoration: none;
+            color: yellow;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+            word-spacing: 150px;
+
+        }
+
+        .add a:hover {
+            color: #F39C12;
+            transform: scale(1.1);
+        }
+
+        /* Background container */
+        .abo {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .abo img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        /* Content section */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(39, 33, 33, 0.6));
+            padding: 10px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            animation: fadeIn 2.5s ease-in-out;
+            margin-top: 10px;
+        }
+
+        /* Button styles */
+        .content a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid white;
+            border-radius: 25px;
+            background: transparent;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .content h1:hover,
+        .content p:hover {
+            color: #F39C12;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .content a:hover {
+            background: white;
+            color: black;
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .content {
+                width: 80%;
+                padding: 20px;
+            }
+
+            .content h1 {
+                font-size: 2rem;
+            }
+
+            .content p {
+                font-size: 1rem;
+            }
+
+            .add {
+                flex-wrap: wrap;
+                gap: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="add">
+        <a href="index.html" >Home</a>
+        <a href="about.html" >About</a>
+        <a href="skills.html" >Skills</a>
+        <a href="experience.html" >Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html" >Certifications</a>
+        <a href="contact.html" >Contact</a>
+    </div>
+
+    <div class="abo">
+        <img src="https://png.pngtree.com/background/20231030/original/pngtree-extreme-closeup-3d-rendering-of-white-pc-keyboard-with-blue-swift-picture-image_5805710.jpg" alt="Background">
+        <section id="about" class="content">
+            <h1>About Me</h1>
+            <p>Teaching Associate</p>
+            <p>Institution: O.P. Jindal University</p>
+            <p>Duration: Since August 5, 2024</p>
+            <p>
+                Teaching courses such as Computer Fundamentals, Python for Data Science, and Introduction to Data Science.
+                Guiding students through foundational and advanced concepts in data analysis and programming.
+                Facilitating labs and interactive sessions to enhance learning outcomes.
+                Providing academic mentorship and support to students.
+            </p>
+            <a href="#contact">Learn More</a>
+        </section>
+    </div>
+</body>
+</html>

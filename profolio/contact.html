@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Section</title>
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navigation bar */
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            background: black;
+            padding: 10px 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: yellow;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .nav a:hover {
+            color: #F39C12;
+            transform: scale(1.1);
+        }
+
+        /* Container for the image and content */
+        .img {
+            position: relative;
+            height: calc(100vh - 50px); /* Adjust height to fit the footer */
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Background image styles */
+        .img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        /* Contact content overlay */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, rgba(42, 40, 40, 0.8), rgba(39, 33, 33, 0.6));
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        /* Heading styling */
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #f4f4f4;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .content h2:hover {
+            color: #ff6f61; /* Change color on hover */
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+
+        /* Paragraph styling for contact details */
+        .content p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .content p:hover {
+            color: #ffd700; /* Change color on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        /* Links styling */
+        .content a {
+            color: #0077b6;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .content a:hover {
+            color: #00b4d8; /* Change link color on hover */
+            text-decoration: underline;
+        }
+
+        /* Footer styling */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed; /* Fix the footer at the bottom */
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <a href="index.html" target="_blank">Home</a>
+        <a href="about.html" target="_blank">About</a>
+        <a href="skills.html" target="_blank">Skills</a>
+        <a href="experience.html" target="_blank">Experience</a>
+        <a href="projects.html" target="_blank">Projects</a>
+        <a href="certifications.html" target="_blank">Certifications</a>
+        <a href="contact.html" target="_blank">Contact</a>
+    </div>
+
+    <div class="img">
+        <img src="https://www.shutterstock.com/image-illustration/contact-us-stack-colorful-cubes-260nw-1549177559.jpg" alt="Background Image">
+        <section id="contact" class="content">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:ankitpatnayak007@gmail.com">ankitpatnayak007@gmail.com</a></p>
+            <p>Phone: +91 6232518588</p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/ankit-patnayak-394091221" target="_blank">Ankit Patnayak</a></p>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Ankit Patnayak | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
